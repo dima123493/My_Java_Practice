@@ -15,5 +15,14 @@ public class EvenOrOdd {
                 System.out.println("odd");
             }
         } while (elem != 0);
+
+        //Same but higher level
+        while (scanner.hasNext()) {
+            int number = scanner.nextInt();
+            if (number == 0) {
+                break;
+            }
+            System.out.println(number % 2 == 0 ? "even" : "odd");
+        }
     }
 }
