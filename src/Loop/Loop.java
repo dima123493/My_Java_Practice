@@ -1,15 +1,17 @@
 package Loop;
 
+import static java.lang.System.*;
+
 public class Loop {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                System.out.print(j + " ");
+                out.print(j + " ");
                 if (i == j) {
                     break;
                 }
             }
-            System.out.println();
+            out.println();
         }
 
         //prints even numbers only
@@ -18,7 +20,7 @@ public class Loop {
             if (i % 2 != 0) {
                 continue;
             }
-            System.out.print(i + " ");
+            out.print(i + " ");
         }
     }
 }

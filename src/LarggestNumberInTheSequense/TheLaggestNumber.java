@@ -2,9 +2,11 @@ package LarggestNumberInTheSequense;
 
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 public class TheLaggestNumber {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         int sum = 0;
         int elem;
         do {
@@ -13,7 +15,7 @@ public class TheLaggestNumber {
                 sum = elem;
             }
         } while (elem != 0);
-        System.out.print(sum);
+        out.print(sum);
     }
 
 }

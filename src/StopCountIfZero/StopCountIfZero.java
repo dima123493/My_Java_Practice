@@ -2,13 +2,15 @@ package StopCountIfZero;
 
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 public class StopCountIfZero {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         int counter = 0;
         while (scanner.nextInt() != 0){
             counter++;
         }
-        System.out.println(counter);
+        out.println(counter);
     }
 }

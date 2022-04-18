@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Stack;
 
+import static java.lang.System.*;
+
 class ValidParentheses {
     public static boolean isValid(String str) {
         Map<Character, Character> parenthesesMapping = new HashMap<>();
@@ -30,6 +32,6 @@ class ValidParentheses {
     }
 
     public static void main(String[] args) {
-        System.out.println(isValid("([)]"));
+        out.println(isValid("([)]"));
     }
 }

@@ -1,18 +1,20 @@
 package ArrayRotation;
 
+import static java.lang.System.*;
+
 public class ArrayRotation {
     public static void main(String[] args) {
         int[][] array =
                 {{9, 8, 7},
                  {6, 5, 4},
                  {3, 2, 1}};
-        System.out.println("Before:");
+        out.println("Before:");
         print(array);
-        System.out.println();
-        System.out.println("Rotate the array on 90 degrees to the right:");
+        out.println();
+        out.println("Rotate the array on 90 degrees to the right:");
         print(turnToRight(array));
-        System.out.println();
-        System.out.println("Rotate the array on 90 degrees to the left:");
+        out.println();
+        out.println("Rotate the array on 90 degrees to the left:");
         print(turnToLeft(array));
     }
 
@@ -20,10 +22,10 @@ public class ArrayRotation {
         int numbers = array.length;
         for (int[] ints : array) {
             for (int j = 0; j < numbers; ++j) {
-                System.out.print(ints[j]);
-                System.out.print(' ');
+                out.print(ints[j]);
+                out.print(' ');
             }
-            System.out.println();
+            out.println();
         }
         return array;
     }

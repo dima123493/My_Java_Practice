@@ -2,13 +2,15 @@ package Counter;
 
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 public class Counter {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         int number = scanner.nextInt();
         for (int i = 0; i <= number; i++) {
-            System.out.println(i+"!");
+            out.println(i+"!");
         }
-        System.out.println();
+        out.println();
     }
 }

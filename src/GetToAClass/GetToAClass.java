@@ -1,5 +1,7 @@
 package GetToAClass;
 
+import static java.lang.System.*;
+
 public class GetToAClass {
 
     class A {
@@ -13,10 +15,10 @@ public class GetToAClass {
     class C extends B{
         int i = 3;
         void f() {
-            System.out.println(this.i);
-            System.out.println(super.i);
+            out.println(this.i);
+            out.println(super.i);
             A a = this;
-            System.out.println(((A)this).i);
+            out.println(((A)this).i);
         }
     }
 

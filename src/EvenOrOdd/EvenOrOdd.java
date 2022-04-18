@@ -2,17 +2,19 @@ package EvenOrOdd;
 
 import java.util.Scanner;
 
+import static java.lang.System.*;
+
 public class EvenOrOdd {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         int elem;
         do {
             elem = scanner.nextInt();
             if (elem % 2 == 0 && elem != 0) {
-                System.out.println("even");
+                out.println("even");
             }
             if (elem % 2 != 0) {
-                System.out.println("odd");
+                out.println("odd");
             }
         } while (elem != 0);
 
@@ -22,7 +24,7 @@ public class EvenOrOdd {
             if (number == 0) {
                 break;
             }
-            System.out.println(number % 2 == 0 ? "even" : "odd");
+            out.println(number % 2 == 0 ? "even" : "odd");
         }
     }
 }
