@@ -17,6 +17,8 @@ public class ArrayShenanigans {
         arrayInput();
         calculateSpecificElement();
         sumOfElementsGreaterThanN();
+        sumOfElementsEntered();
+        circulyShifted();/*same but better*/ circulyShifted1();
     }
 
     static void sorting() {
@@ -121,22 +123,22 @@ public class ArrayShenanigans {
 
     /**
      * Write a program that reads an array of ints and an integer number n. The program must sum all the array elements greater than n.
-     *
+     * <p>
      * Input data format
-     *
+     * <p>
      * The first line contains the size of an array.
      * The second line contains the elements of the array separated by spaces.
      * The third line contains the number n.
-     *
+     * <p>
      * Output data format
-     *
+     * <p>
      * Sample Input 1:
-     *
+     * <p>
      * 5
      * 5 8 11 2 10
      * 8
      * Sample Output 1:
-     *
+     * <p>
      * 21
      */
     static void sumOfElementsGreaterThanN() {
@@ -160,4 +162,50 @@ public class ArrayShenanigans {
 
         out.println(sum);
     }
+
+    static void sumOfElementsEntered() {
+        Scanner scanner = new Scanner(in);
+        int sizeNumber = scanner.nextInt();
+        int[] size = new int[sizeNumber];
+        int sum = 0;
+
+        for (int i = 0; i < size.length; i++) {
+            size[i] = scanner.nextInt();
+            int value = size[i];
+            sum += value;
+        }
+        out.println(sum);
+    }
+
+    static void circulyShifted() {
+        Scanner scanner = new Scanner(in);
+        int sizeNumber = scanner.nextInt();
+        int[] size = new int[sizeNumber];
+
+        for (int i = 0; i < size.length; i++) {
+            size[i] = scanner.nextInt();
+        }
+        int x = size[size.length - 1], i;
+        for (i = size.length - 1; i > 0; i--) {
+            size[i] = size[i - 1];
+        }
+        size[0] = x;
+
+        out.println(Arrays.toString(size).replace("[", "").replace("]", "").replace(",", ""));
+    }
+
+    static void circulyShifted1() {
+        Scanner scanner = new Scanner(in);
+        int[] intArray = new int[scanner.nextInt()];
+
+        for (int i = 1; i < intArray.length; i++) {
+            intArray[i] = scanner.nextInt();
+        }
+        intArray[0] = scanner.nextInt();
+
+        for (int i : intArray) {
+            out.print(i + " ");
+        }
+    }
+
 }
